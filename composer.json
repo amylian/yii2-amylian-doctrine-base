@@ -6,4 +6,5 @@
     "psr-4": {
       "abexto\\amylian\\yii\\doctrine\\base\\": "src/"
     }  
+  }
 }
