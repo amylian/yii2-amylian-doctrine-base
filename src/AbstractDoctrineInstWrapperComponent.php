@@ -13,24 +13,40 @@ namespace abexto\amylian\yii2\doctrine\base;
  */
 class AbstractDoctrineInstWrapperComponent extends \abexto\amylian\yii2\base\common\AbstractInstanceWrapperComponent
 {
-    
+
     /**
      * @var \yii\base\Component
      */
     public $parent = null;
-    
-    protected function getInstRelatedPropertyNames()
+
+    protected function getInstPropertyMatchings()
     {
         return [];
     }
+
     /**
      * 
      * @param object $inst
      */
     protected function setInstProperites($inst)
     {
-        
+        foreach ($this->getInstRelatedPropertyNames() as $cpn => $ipn) {
+            if ($ipn === true) {
+                $ipn = $cpn;
+            }
+            if ($ipn !== false) {
+                if (property_exists($inst, $cpn)) {
+                    $inst->ipn = $this->$cpn;
+                } else {
+                    $setter = 'set' . ucfirst($ipn);
+                    if (method_exists($inst, $setter)) {
+                        $inst->$setter($this->$cpn);
+                    }
+                }
+            }
+        }
     }
+
     /**
      * @inheritDoc
      */
@@ -40,4 +56,5 @@ class AbstractDoctrineInstWrapperComponent extends \abexto\amylian\yii2\base\com
         $this->setInstParams($result);
         return $result;
     }
+
 }
