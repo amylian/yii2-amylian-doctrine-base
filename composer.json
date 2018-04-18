@@ -1,5 +1,9 @@
 {
-    "name": "amylian/yii2-amylian-doctrine-base",
-    "type": "yii2-extension",
-    "minimum-stability": "dev"
+  "name": "amylian/yii2-amylian-doctrine-base",
+  "type": "yii2-extension",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "abexto\\amylian\\yii\\doctrine\\base\\": "src/"
+    }  
 }
