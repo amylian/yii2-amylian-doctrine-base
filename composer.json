@@ -2,6 +2,7 @@
   "name": "amylian/yii2-amylian-doctrine-base",
   "license": "BSD-3-Clause",
   "type": "yii2-extension",
+  "description": "ATTENTION EXPERIMENTAL! Core package for all Amylian/Doctrine packages",
   "repositories": [
     {
       "type": "composer",
