@@ -2,6 +2,12 @@
   "name": "amylian/yii2-amylian-doctrine-base",
   "license": "BSD-3-Clause",
   "type": "yii2-extension",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "require": {
     "amylian/yii2-amylian-base": "*"
   },
