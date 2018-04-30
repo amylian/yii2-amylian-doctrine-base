@@ -41,7 +41,7 @@ namespace abexto\amylian\yii\doctrine\base\tests\units;
  */
 class CoreDoctrineInstWrapperComponentTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCase
 {
-    public function AbstractDoctrineInstWrapperComponentClassExists()
+    public function testAbstractDoctrineInstWrapperComponentClassExists()
     {
         $this->assertTrue(class_exists(\abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent::class));
     }
