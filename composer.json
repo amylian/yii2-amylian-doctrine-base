@@ -3,6 +3,8 @@
   "license": "BSD-3-Clause",
   "type": "yii2-extension",
   "description": "ATTENTION EXPERIMENTAL! Core package for all Amylian/Doctrine packages",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "composer",
