@@ -32,25 +32,14 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base\tests\units;
-
-require_once __DIR__.'/../classes/DummyDoctrineInstWrapperComponent.php';
+namespace abexto\amylian\yii\base\tests\app\classes;
 
 /**
- * Description of CoreDoctrineInstWrapperComponentTest
+ * Description of DummyDoctrineInstWrapperComponent
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class CoreDoctrineInstWrapperComponentTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCase
+class DummyDoctrineInstWrapperComponent extends \abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent
 {
-    public function testAbstractDoctrineInstWrapperComponentClassExists()
-    {
-        $this->assertTrue(class_exists(\abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent::class));
-    }
-    
-    public function testDummyDoctrineInstWrapperComponentClassExists()
-    {
-        $this->assertTrue(class_exists(\abexto\amylian\yii\base\tests\app\classes\DummyDoctrineInstWrapperComponent::class));
-    }
-    
+    //put your code here
 }
