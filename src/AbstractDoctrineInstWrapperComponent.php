@@ -16,5 +16,14 @@ abstract class AbstractDoctrineInstWrapperComponent extends \abexto\amylian\yii\
 {
 
     use common\DoctrineComponentTrait;
+    
+    /**
+     * Ensures a object of this class
+     * @param array|string|object $reference
+     */
+    public static function ensure($reference, $type = null)
+    {
+        return \abexto\amylian\yii\doctrine\base\InstanceManager::ensure($reference, $type === null ? static::class : $type);
+    }
 
 }
