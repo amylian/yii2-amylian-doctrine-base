@@ -31,25 +31,29 @@ trait DoctrineComponentTrait
 
     protected function createDoctrineObject($type, array $params = [])
     {
-        if (is_array($definition)) {
-            $className = isset($definition['class']) ? $definition['class'] : null;
+        return \abexto\amylian\yii\doctrine\base\InstanceManager::ensure($reference, $type, $container);
+        
+        /*
+        if (is_array($type)) {
+            $className = isset($type['class']) ? $type['class'] : null;
         } elseif (is_string($type)) {
             $className = $type;
         } else {
             $className = null;
         }
         if ($className) {
-        if (!isset($definition['parentDoctrineComponent'])) {
-            $reflect = new \ReflectionClass($className);
-            if ($reflect->implementsInterface(DoctrineComponentInterface::class)) {
-                if (!is_array($type)) {
-                    $type['class'] = $type;
+            if (!isset($definition['parentDoctrineComponent'])) {
+                $reflect = new \ReflectionClass($className);
+                if ($reflect->implementsInterface(DoctrineComponentInterface::class)) {
+                    if (!is_array($type)) {
+                        $type['class'] = $type;
+                    }
+                    $type['parentDoctrineComponent'] = $this;
                 }
-                $type['parentDoctrineComponent'] = $this;
             }
         }
-        }
         return \Yii::createObject($type, $params);
+        */
     }
 
     /**
@@ -59,11 +63,13 @@ trait DoctrineComponentTrait
      */
     public function resolveReference($reference, $type = null, $container = null)
     {
+        return \abexto\amylian\yii\doctrine\base\InstanceManager::ensure($reference, $type, $container);
+        /*
         if (is_object($reference)) {
             return $reference;
         }
         if (is_array($reference)) {
-            return $this->createDoctrineObject($reference, $type, $container);
+            return $this->createDoctrineObject($reference, []);
         } else {
             if ($this->getParentDoctrineComponent() instanceof DoctrineComponentInterface) {
                 return $this->getParentDoctrineComponent()->resolveReference($reference, $type);
@@ -71,6 +77,7 @@ trait DoctrineComponentTrait
                 return NULL;
             }
         }
+        */
     }
 
     protected function internalEnsureChild($reference, $type = null, $container = null)
