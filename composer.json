@@ -12,7 +12,7 @@
     }
   ],
   "require": {
-    "amylian/yii2-amylian-base": "*"
+    "amylian/yii2-amylian-base": "dev-master"
   },
   "require-dev": {
     "amylian/yii2-amylian-phpunit": "*"
