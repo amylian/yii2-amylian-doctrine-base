@@ -45,7 +45,7 @@ class CoreDoctrineInstWrapperComponentTest extends \abexto\amylian\yii\phpunit\A
 {
     public function testAbstractDoctrineInstWrapperComponentClassExists()
     {
-        $this->assertTrue(class_exists(\abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent::class));
+        $this->assertTrue(class_exists(\abexto\amylian\yii\doctrine\base\BaseDoctrineComponent::class));
     }
     
     public function testDummyDoctrineInstWrapperComponentClassExists()

@@ -39,7 +39,7 @@ namespace abexto\amylian\yii\base\tests\app\classes;
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class DummyDoctrineInstWrapperComponent extends \abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent
+class DummyDoctrineInstWrapperComponent extends \abexto\amylian\yii\doctrine\base\BaseDoctrineComponent
 {
     //put your code here
 }

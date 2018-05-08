@@ -32,45 +32,15 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base\tests\units;
-
-require_once __DIR__ . '/../classes/DummyTestCacheComponent.php';
-require_once __DIR__ . '/../classes/DummyTestCacheComponentEx.php';
+namespace abexto\amylian\yii\doctrine\base;
 
 /**
- * Description of InstanceManagerTest
+ * Static class containing shared constants
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class InstanceManagerTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCase
+class Consts
 {
-
-    public function setUp()
-    {
-        parent::setUp();
-        static::destroyYiiApplication();
-        static::mockYiiConsoleApplication(['components' => [
-                'cache'          => [
-                    'class' => \yii\caching\ArrayCache::class
-                ],
-                'dcEventManager' => [
-                    'class' => \abexto\amylian\yii\doctrine\common\BaseEventManager::class
-                ],
-                'dcCache'        => [
-                    'class' => \abexto\amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponentEx::class
-                ]
-        ]]);
-    }
-
-    public function testEnsureYiiCache()
-    {
-        $this->assertSame(\Yii::$app->cache,
-                          \abexto\amylian\yii\doctrine\base\InstanceManager::ensure('cache', \yii\caching\Cache::class));
-    }
-
-    public function testEnsureDcCache()
-    {
-        $this->assertSame(\Yii::$app->dcCache,  \abexto\amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponent::ensure('dcCache'));
-    }
-
 }
+
+

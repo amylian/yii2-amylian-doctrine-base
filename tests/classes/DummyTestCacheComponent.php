@@ -39,6 +39,6 @@ namespace abexto\amylian\yii\doctrine\base\tests\classes;
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class DummyTestCacheComponent extends \abexto\amylian\yii\doctrine\base\AbstractDoctrineInstWrapperComponent
+class DummyTestCacheComponent extends \abexto\amylian\yii\doctrine\base\BaseDoctrineComponent
 {
 }
