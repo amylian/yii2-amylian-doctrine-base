@@ -32,7 +32,7 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base\tests\units;
+namespace amylian\yii\doctrine\base\tests\units;
 
 require_once __DIR__ . '/../classes/DummyTestCacheComponent.php';
 require_once __DIR__ . '/../classes/DummyTestCacheComponentEx.php';
@@ -42,7 +42,7 @@ require_once __DIR__ . '/../classes/DummyTestCacheComponentEx.php';
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class InstanceManagerTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCase
+class InstanceManagerTest extends \amylian\yii\phpunit\AbstractYiiTestCase
 {
 
     public function setUp()
@@ -54,10 +54,10 @@ class InstanceManagerTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCas
                     'class' => \yii\caching\ArrayCache::class
                 ],
                 'dcEventManager' => [
-                    'class' => \abexto\amylian\yii\doctrine\common\BaseEventManager::class
+                    'class' => \amylian\yii\doctrine\common\EventManager::class
                 ],
                 'dcCache'        => [
-                    'class' => \abexto\amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponentEx::class
+                    'class' => \amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponentEx::class
                 ]
         ]]);
     }
@@ -65,12 +65,12 @@ class InstanceManagerTest extends \abexto\amylian\yii\phpunit\AbstractYiiTestCas
     public function testEnsureYiiCache()
     {
         $this->assertSame(\Yii::$app->cache,
-                          \abexto\amylian\yii\doctrine\base\InstanceManager::ensure('cache', \yii\caching\Cache::class));
+                          \amylian\yii\doctrine\base\InstanceManager::ensure('cache', \yii\caching\Cache::class));
     }
 
     public function testEnsureDcCache()
     {
-        $this->assertSame(\Yii::$app->dcCache,  \abexto\amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponent::ensure('dcCache'));
+        $this->assertSame(\Yii::$app->dcCache,  \amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponent::ensure('dcCache'));
     }
 
 }

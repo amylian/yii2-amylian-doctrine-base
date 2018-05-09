@@ -19,12 +19,12 @@
   },
   "autoload": {
     "psr-4": {
-      "abexto\\amylian\\yii\\doctrine\\base\\": "src/"
+      "amylian\\yii\\doctrine\\base\\": "src/"
     }  
   },
   "autoload-dev": {
     "psr-4": {
-      "abexto\\amylian\\yii\\doctrine\\base\\tests\\": "tests/"
+      "amylian\\yii\\doctrine\\base\\tests\\": "tests/"
     }  
   }
 }

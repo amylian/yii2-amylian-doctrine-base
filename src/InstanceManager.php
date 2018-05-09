@@ -32,7 +32,7 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base;
+namespace amylian\yii\doctrine\base;
 
 /**
  * Unitility class for object instance management

@@ -32,7 +32,7 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base;
+namespace amylian\yii\doctrine\base;
 
 /**
  * Static class containing shared constants

@@ -32,7 +32,7 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base\exceptions;
+namespace amylian\yii\doctrine\base\exceptions;
 
 /**
  * Description of InvalidArgumentException

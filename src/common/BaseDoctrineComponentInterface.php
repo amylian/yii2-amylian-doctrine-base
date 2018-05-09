@@ -4,7 +4,7 @@
  * Copyright 2018 Andreas Prucha, Abexto - Helicon Software Development.
  */
 
-namespace abexto\amylian\yii\doctrine\base\common;
+namespace amylian\yii\doctrine\base\common;
 
 /**
  *
@@ -21,7 +21,7 @@ interface BaseDoctrineComponentInterface
     /**
      * Ensures a object of this class
      * 
-     * Returns an object instance by calling {@link \abexto\amylian\yii\doctrine\base\InstanceManager::ensure()}
+     * Returns an object instance by calling {@link \amylian\yii\doctrine\base\InstanceManager::ensure()}
      * 
      * If $reference contains an class name, interface name or alias it returns the referred object.
      * If $reference contains an configuration array, a new object based on the configuration is created

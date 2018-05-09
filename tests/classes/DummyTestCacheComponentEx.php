@@ -32,7 +32,7 @@
  * 
  */
 
-namespace abexto\amylian\yii\doctrine\base\tests\classes;
+namespace amylian\yii\doctrine\base\tests\classes;
 
 /**
  * Description of TestComponent

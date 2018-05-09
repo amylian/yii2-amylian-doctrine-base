@@ -32,14 +32,14 @@
  * 
  */
 
-namespace abexto\amylian\yii\base\tests\app\classes;
+namespace amylian\yii\base\tests\app\classes;
 
 /**
  * Description of DummyDoctrineInstWrapperComponent
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-class DummyDoctrineInstWrapperComponent extends \abexto\amylian\yii\doctrine\base\BaseDoctrineComponent
+class DummyDoctrineInstWrapperComponent extends \amylian\yii\doctrine\base\BaseDoctrineComponent
 {
     //put your code here
 }

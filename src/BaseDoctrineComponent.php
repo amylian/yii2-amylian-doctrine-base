@@ -4,14 +4,14 @@
  * Copyright 2018 Andreas Prucha, Abexto - Helicon Software Development.
  */
 
-namespace abexto\amylian\yii\doctrine\base;
+namespace amylian\yii\doctrine\base;
 
 /**
  * Description of AbstractDoctrineInstWrapper
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-abstract class BaseDoctrineComponent extends \abexto\amylian\yii\base\common\BasetInstanceWrapperComponent
+abstract class BaseDoctrineComponent extends \amylian\yii\base\common\BasetInstanceWrapperComponent
         implements common\BaseDoctrineComponentInterface
 {
 
@@ -35,7 +35,7 @@ abstract class BaseDoctrineComponent extends \abexto\amylian\yii\base\common\Bas
             throw new \yii\base\InvalidArgumentException(static::class.'::ensure() called with paramter $reference not set, '.
                     'but component does not define a default reference');
         }
-        return \abexto\amylian\yii\doctrine\base\InstanceManager::ensure($reference, $type);
+        return \amylian\yii\doctrine\base\InstanceManager::ensure($reference, $type);
     }
 
 }
