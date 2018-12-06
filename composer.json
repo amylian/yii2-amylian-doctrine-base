@@ -1,30 +1,30 @@
 {
-  "name": "amylian/yii2-amylian-doctrine-base",
-  "license": "BSD-3-Clause",
-  "type": "yii2-extension",
-  "description": "ATTENTION EXPERIMENTAL! Core package for all Amylian/Doctrine packages",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
-  "require": {
-    "amylian/yii2-amylian-base": "dev-master"
-  },
-  "require-dev": {
-    "amylian/yii2-amylian-phpunit": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "amylian\\yii\\doctrine\\base\\": "src/"
-    }  
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "amylian\\yii\\doctrine\\base\\tests\\": "tests/"
-    }  
-  }
+	"name" : "amylian/yii2-amylian-doctrine-base",
+	"license" : "BSD-3-Clause",
+	"type" : "yii2-extension",
+	"description" : "ATTENTION EXPERIMENTAL! Core package for all Amylian/Doctrine packages",
+	"minimum-stability" : "dev",
+	"prefer-stable" : true,
+	"repositories" : [{
+			"type" : "composer",
+			"url" : "https://asset-packagist.org"
+		}
+	],
+	"require" : {
+		"amylian/yii2-amylian-base" : "dev-master"
+	},
+	"require-dev" : {
+		"amylian/yii2-amylian-phpunit" : "*",
+		"phpunit/phpunit" : "*"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"amylian\\yii\\doctrine\\base\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"amylian\\yii\\doctrine\\base\\tests\\" : "tests/"
+		}
+	}
 }
