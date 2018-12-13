@@ -10,7 +10,7 @@ namespace amylian\yii\doctrine\base\common;
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-interface BaseDoctrineComponentInterface
+interface DoctrineComponentInterface
 {
 
     /**
@@ -31,7 +31,7 @@ interface BaseDoctrineComponentInterface
      * 
      * @param true|array|string|object $reference Id or configuration.
      * ̍@param string $type Required class. if not specified, the default class is used
-     * @return DoctrineInstWrapperComponentInterface Required object instance
+     * @return DoctrineComponentInterface Required object instance
      */
     public static function ensure($reference = self::USE_DEFAULT_REF, $type = null, $container = null): BaseDoctrineComponentInterface;
 }

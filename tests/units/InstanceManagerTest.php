@@ -53,9 +53,6 @@ class InstanceManagerTest extends \amylian\yii\phpunit\AbstractYiiTestCase
                 'cache'          => [
                     'class' => \yii\caching\ArrayCache::class
                 ],
-                'dcEventManager' => [
-                    'class' => \amylian\yii\doctrine\common\EventManager::class
-                ],
                 'dcCache'        => [
                     'class' => \amylian\yii\doctrine\base\tests\classes\DummyTestCacheComponentEx::class
                 ]

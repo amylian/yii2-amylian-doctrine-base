@@ -34,6 +34,10 @@
 
 namespace amylian\yii\doctrine\base;
 
+use yii\base\InvalidConfigException;
+use yii\di\Container;
+use yii\di\ServiceLocator;
+
 /**
  * Unitility class for object instance management
  *
@@ -45,10 +49,15 @@ class InstanceManager
      * Ensures an object instance 
      * 
      * @see \yii\di\Instance::ensure()
-     * @param type $reference
-     * @param type $type
-     * @param type $container
-     * @return type
+     * 
+     * @param object|string|array|static $reference an object or a reference to the desired object.
+     * You may specify a reference in terms of a component ID or an Instance object.
+     * Starting from version 2.0.2, you may also pass in a configuration array for creating the object.
+     * If the "class" value is not specified in the configuration array, it will use the value of `$type`.
+     * @param string $type the class/interface name to be checked. If null, type check will not be performed.
+     * @param Container|ServiceLocator $container the container. This will be passed to [[get()]].
+     * @return object the object referenced by the Instance, or `$reference` itself if it is an object.
+     * @throws InvalidConfigException if the reference is invalid
      */
     static public function ensure($reference, $type = null, $container = null)
     {
