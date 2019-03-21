@@ -11,7 +11,7 @@ namespace amylian\yii\doctrine\base;
  *
  * @author Andreas Prucha, Abexto - Helicon Software Development
  */
-abstract class BaseDoctrineComponent extends \amylian\yii\base\common\BasetInstanceWrapperComponent
+abstract class BaseDoctrineComponent extends \amylian\yii\base\common\BaseInstanceWrapperComponent
         implements common\BaseDoctrineComponentInterface
 {
 
